@@ -8,6 +8,7 @@ function display_help {
     echo "";
     echo "command:";
     echo "  build       build by webpack";
+    echo "  watch       build by webpack(mode: watch)";
     echo "  npm-ci      npm install(ci)";
     echo "  exec        exec app.js";
     echo "  clean       cleanup dist directory";
@@ -31,6 +32,9 @@ cd ${DIR_APP}
 if [ "$1" = "build" ]; then
     rm -rf dist
     npm run build
+
+elif [ "$1" = "watch" ]; then
+    npm run watch
 
 elif [ "$1" = "npm-ci" ]; then
     npm ci
