@@ -10,6 +10,7 @@ Javascript の Proxy によるライブラリ拡張の検証
 2. [環境](#環境)
 3. [使い方](#使い方)
 4. [備考](#備考)
+
 <!-- /code_chunk_output -->
 
 ## 目的
@@ -31,6 +32,14 @@ git clone [リポジトリURL]
 cd sample-javascript-proxy
 
 ./run.sh npm-ci
+```
+
+webpack でバンドルしてから実行してください
+
+```bash
+# sample-javascript-proxyフォルダで実行する
+./run.sh build
+./run.sh exec
 ```
 
 ## 備考
