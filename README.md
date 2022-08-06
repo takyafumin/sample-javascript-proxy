@@ -24,13 +24,13 @@ Javascript でライブラリを拡張する手段として Proxy を利用で�
 
 ## 使い方
 
-リポジトリをクローンして、`npm ci`にて node modules をインストールしてください
+リポジトリをクローンして、`run.sh`を使って node modules をインストールしてください
 
 ```bash
 git clone [リポジトリURL]
-cd sample-javascript-proxy/app
+cd sample-javascript-proxy
 
-npm ci
+./run.sh npm-ci
 ```
 
 ## 備考
