@@ -28,7 +28,7 @@ Javascript でライブラリを拡張する手段として Proxy を利用で�
 
 ```bash
 git clone [リポジトリURL]
-cd sample-javascript-proxy/app/src
+cd sample-javascript-proxy/app
 
 npm ci
 ```
