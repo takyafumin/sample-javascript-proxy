@@ -1,18 +1,25 @@
 import { DateTime } from "luxon";
-import { SystemClock } from "./libs/SystemClock";
+import { SystemClockWrapper } from "./libs/SystemClockWrapper";
+import { SystemClockExtends } from "./libs/SystemClockExtends";
 
-// -----------------
-// Luxon2での出力
-// -----------------
+console.log("----------------------------------------");
+console.log("Luxon2での出力");
 const now = DateTime.local();
 console.log(now.toString());
 
-// -----------------
-// SystemClockでの出力
-// -----------------
-
+console.log("----------------------------------------");
+console.log("SystemClockWrapperでの出力");
 /**
- * @type {SystemClock} 日時ライブラリ
+ * @type {SystemClockWrapper} 日時ライブラリ
  */
-const clock = new SystemClock();
-console.log(clock.now());
+const clockWrapper = new SystemClockWrapper();
+console.log(clockWrapper.name);
+console.log(clockWrapper.now());
+console.log(clockWrapper.local().toString());
+
+console.log("----------------------------------------");
+console.log("SystemClockExtendsでの出力, static参照");
+
+console.log(SystemClockExtends.name);
+console.log(SystemClockExtends.now());
+console.log(SystemClockExtends.local().toString());
