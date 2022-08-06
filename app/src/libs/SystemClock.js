@@ -1,9 +1,12 @@
 /**
  * システム日時ライブラリクラス
+ *
+ * @param {Date} base ベースとなる日付インスタンス
  */
 export class SystemClock {
 	constructor() {
 		console.log("SystemClock Constructor");
+		this.base = new Date();
 	}
 
 	/**
@@ -12,6 +15,6 @@ export class SystemClock {
 	 * @return {Date} 現在日時
 	 */
 	now() {
-		return new Date();
+		return this.base.toString();
 	}
 }
